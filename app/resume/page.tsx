@@ -172,12 +172,12 @@ const Resume = () => {
         </section>
 
         {/* Work Experience */}
-        <section className="mb-8">
+        <section className="mb-8 print-section">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-blue-600 pb-2">
             Work Experience
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-6 print:space-y-4">
             <JobExperience
               title="Chief Technology Officer"
               company="Kamero.ai"
@@ -315,7 +315,7 @@ const JobExperience = ({
   technologies,
   responsibilities,
 }: JobExperienceProps) => (
-  <div className="print-avoid">
+  <div className="print-compact">
     <div className="flex justify-between items-start mb-2">
       <div>
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
@@ -333,9 +333,11 @@ const JobExperience = ({
       <strong>Technologies:</strong> {technologies}
     </div>
 
-    <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+    <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm print:space-y-0 print:leading-tight">
       {responsibilities.map((resp, index) => (
-        <li key={index}>{resp}</li>
+        <li key={index} className="print:mb-1">
+          {resp}
+        </li>
       ))}
     </ul>
   </div>
