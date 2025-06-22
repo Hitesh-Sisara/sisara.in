@@ -10,6 +10,30 @@ import {
   Phone,
 } from "lucide-react";
 
+// Type definitions
+interface SkillCategoryProps {
+  title: string;
+  skills: string;
+}
+
+interface JobExperienceProps {
+  title: string;
+  company: string;
+  duration: string;
+  location: string;
+  type: string;
+  technologies: string;
+  responsibilities: string[];
+}
+
+interface EducationItemProps {
+  degree: string;
+  institution: string;
+  duration: string;
+  location: string;
+  percentage: string;
+}
+
 const Resume = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -270,7 +294,7 @@ const Resume = () => {
 };
 
 // Skill Category Component
-const SkillCategory = ({ title, skills }) => (
+const SkillCategory = ({ title, skills }: SkillCategoryProps) => (
   <div className="mb-2">
     <div className="flex flex-col sm:flex-row sm:gap-4">
       <div className="font-semibold text-gray-800 min-w-fit sm:w-48 mb-1 sm:mb-0">
@@ -290,7 +314,7 @@ const JobExperience = ({
   type,
   technologies,
   responsibilities,
-}) => (
+}: JobExperienceProps) => (
   <div className="print-avoid">
     <div className="flex justify-between items-start mb-2">
       <div>
@@ -324,7 +348,7 @@ const EducationItem = ({
   duration,
   location,
   percentage,
-}) => (
+}: EducationItemProps) => (
   <div className="print-avoid">
     <div className="flex justify-between items-start mb-1">
       <div>
