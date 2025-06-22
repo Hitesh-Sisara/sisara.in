@@ -138,7 +138,7 @@ const Resume = () => {
             />
             <SkillCategory
               title="AI/ML Technologies"
-              skills="AWS SageMaker & Bedrock, Gemini (Google AI APIs), Vortex AI Studio, MCP Server, Retrieval-Augmented Generation (RAG), AI Pipelines, Custom Model Training"
+              skills="MCP Server, Retrieval-Augmented Generation (RAG), AI Pipelines, Custom Model Training,AWS SageMaker & Bedrock, Gemini (Google AI APIs), Vortex AI Studio"
             />
             <SkillCategory
               title="Architecture"
